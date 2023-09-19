@@ -4,18 +4,22 @@ const { errors } = require('celebrate');
 const cookieParser = require('cookie-parser');
 const helmet = require('helmet');
 require('dotenv').config();
+const cors = require('cors');
 const allRouters = require('./routes/index');
-
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 const errorHandler = require('./middlewares/errorHandler');
 
-mongoose.connect('mongodb://127.0.0.1:27017/mestodb', {
+const {
+  PORT = 3000,
+  MONGO_URL = 'mongodb://localhost:27017/mestodb',
+} = process.env;
+mongoose.connect(`${MONGO_URL}`, {
   useNewUrlParser: true,
 });
+// .then(() => console.log('Mongo тут'));
 
-const { PORT = 3000 } = process.env;
 const app = express();
-
+app.use(cors());
 app.use(requestLogger);
 app.use(helmet());
 app.use(cookieParser());
