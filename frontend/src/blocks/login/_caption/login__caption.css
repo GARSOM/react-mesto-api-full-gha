@@ -1,0 +1,17 @@
+.login__caption {
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #FFF;
+}
+
+.login__caption-auth {
+    color: #fff;
+    text-decoration: none;
+}
+
+.auth__link:hover {
+    opacity: .6;
+}

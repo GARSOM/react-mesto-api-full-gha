@@ -1,0 +1,36 @@
+.header {
+    display: flex;
+    max-width: 880px;
+    margin-top: 45px;
+    border-bottom: 1px solid rgba(84, 84, 84, 0.7);
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 1024px) {
+    .header {
+        max-width: 620px;
+    }
+}
+
+
+@media screen and (max-width: 720px) {
+    .header {
+        margin-left: 19px;
+        max-width: 520px;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .profile {
+        max-width: 600px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .header {
+        margin-left: 0px;
+        margin-top: 28px;
+        margin-bottom: 0px;
+    }
+}
