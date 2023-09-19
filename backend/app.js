@@ -1,10 +1,9 @@
-require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const { errors } = require('celebrate');
 const cookieParser = require('cookie-parser');
 const helmet = require('helmet');
-
+require('dotenv').config();
 const allRouters = require('./routes/index');
 
 const { requestLogger, errorLogger } = require('./middlewares/logger');
