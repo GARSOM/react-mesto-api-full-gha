@@ -11,11 +11,6 @@ const { NotFoundError } = require('../errors/index-errors');
 const router = express.Router();
 
 router.post('/signup', validateSignUp, createUser);
-app.get('/crash-test', () => {
-  setTimeout(() => {
-    throw new Error('Сервер сейчас упадёт');
-  }, 0);
-});
 router.post('/signin', validateSignIn, login);
 
 router.use('/users', auth, userRouters);
