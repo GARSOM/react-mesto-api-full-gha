@@ -11,6 +11,6 @@
 
 IP-адрес 158.160.109.133
 
-Frontend https://http://mesto-garsom.nomoredomainsrocks.ru/
+Frontend http://mesto-garsom.nomoredomainsrocks.ru/
 
 Backend https://api.mesto-garsom.nomoredomainsrocks.ru;
