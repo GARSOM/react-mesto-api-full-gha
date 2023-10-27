@@ -9,7 +9,7 @@
 
 ## Ссылки на проект
 
-IP-адрес 51.250.89.235
+IP-адрес 158.160.109.133
 
 Frontend https://http://mesto-garsom.nomoredomainsrocks.ru/
 

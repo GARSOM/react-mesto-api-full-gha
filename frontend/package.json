@@ -1,5 +1,4 @@
 {
-  "homepage": "http://garsom.github.io/mesto-react",
   "name": "mesto-react",
   "version": "0.1.0",
   "private": true,
@@ -19,7 +18,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploys": "npm run build && scp -r ./build/* garsom@158.160.109.133:/home/garsom/react-mesto-api-full-gha/frontend"
   },
   "eslintConfig": {
     "extends": [
