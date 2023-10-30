@@ -62,14 +62,14 @@ class Api {
     }
     setNewCard(data) {
         return fetch(`${this._url}/cards`, {
-          method: 'POST',
-          headers: this._headers,
-          body: JSON.stringify({
-            name: data.name,
-            link: data.link,
-          }),
+            method: 'POST',
+            headers: this._headers,
+            body: JSON.stringify({
+                name: data.name,
+                link: data.link,
+            }),
         }).then(this._checkResponse);
-      }
+    }
     deleteCard(cardId) {
         return fetch(`${this._url}/cards/${cardId}`, {
             method: 'DELETE',
@@ -80,7 +80,7 @@ class Api {
 
 }
 export const api = new Api({
-    url: 'https://mesto.nomoreparties.co/v1/cohort-68',
+    url: 'https://api.mesto-garsom.nomoredomainsrocks.ru',
     headers: {
         authorization: 'd500d7ec-67d0-43b8-8493-6158f5388f21',
         'Content-Type': 'application/json'
