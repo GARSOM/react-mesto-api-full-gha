@@ -80,9 +80,5 @@ class Api {
 
 }
 export const api = new Api({
-    url: 'https://api.mesto-garsom.nomoredomainsrocks.ru',
-    headers: {
-        authorization: 'd500d7ec-67d0-43b8-8493-6158f5388f21',
-        'Content-Type': 'application/json'
-    }
+    url: 'http://localhost:3000',
 })

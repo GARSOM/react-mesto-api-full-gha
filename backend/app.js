@@ -8,6 +8,7 @@ const cors = require('cors');
 const allRouters = require('./routes/index');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 const errorHandler = require('./middlewares/errorHandler');
+const { corsOptions } = require('./middlewares/cors');
 
 const {
   PORT = 3000,
@@ -19,7 +20,7 @@ mongoose.connect(`${MONGO_URL}`, {
 // .then(() => console.log('Mongo тут'));
 
 const app = express();
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(requestLogger);
 app.use(helmet());
 app.use(cookieParser());
